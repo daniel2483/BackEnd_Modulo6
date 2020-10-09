@@ -24,14 +24,14 @@
 </head>
 
 <body>
-  <video src="img/video.mp4" id="vidFondo"></video>
+  <!--<video src="img/video.mp4" id="vidFondo"></video>-->
 
   <div class="contenedor">
     <div class="card rowTitulo">
       <h1>Buscador</h1>
     </div>
     <div class="colFiltros">
-      <form action="buscador.php" method="post" id="formulario">
+      <form action="javascript:;" method="post" id="formulario" >
         <div class="filtrosContenido">
           <div class="tituloFiltros">
             <h5>Realiza una búsqueda personalizada</h5>
@@ -39,7 +39,7 @@
           <div class="filtroCiudad input-field">
             <label for="selectCiudad">Ciudad:</label><br><br>
             <select name="ciudad" id="selectCiudad" style="display: block;">
-              <option value="" selected>Elige una ciudad</option>
+              <option value="none" selected>Elige una ciudad</option>
               <?php
                   for ($i=0; $i< $ciudades_len; $i++){
                     echo "<option value='".$i."'>".$ciudades[$i]."</option>";
@@ -50,7 +50,7 @@
           <div class="filtroTipo input-field">
             <label for="selecTipo">Tipo:</label><br><br>
             <select name="tipo" id="selectTipo" style="display: block;">
-              <option value="" selected>Elige un tipo</option>
+              <option value="none" selected>Elige un tipo</option>
               <?php
                   for ($i=0; $i< $tipos_len; $i++){
                     echo "<option value='".$i."'>".$tipos[$i]."</option>";
